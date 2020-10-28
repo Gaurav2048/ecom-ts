@@ -17,7 +17,7 @@ export interface product {
 
 export type successProducts = {
   type: typeof LOADING_PRODUCTS_SUCCESS;
-  payload: productsInterface;
+  payload: product[];
 };
 
 export type loadingProducts = {

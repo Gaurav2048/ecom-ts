@@ -3,13 +3,13 @@ import {
   LOADING_PRODUCTS_SUCCESS,
   LOADING_PRODUCTS_FAILED,
   productsDispatchType,
-  productsInterface,
+  product,
 } from '../Action/ProductActionTypes';
 
 interface DefaultProductState {
   loading: boolean;
   error: boolean;
-  products?: productsInterface;
+  products?: product[];
 }
 
 const defaultState: DefaultProductState = {
