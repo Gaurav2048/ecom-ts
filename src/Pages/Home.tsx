@@ -11,6 +11,7 @@ const Container = styled.section`
   padding: 0.5em;
   columns: 3;
   column-gap: 15px;
+  min-height: 500px;
   background-color: #f7f7f7;
   display: 'inline-block';
 `;

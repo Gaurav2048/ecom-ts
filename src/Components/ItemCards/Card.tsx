@@ -27,6 +27,7 @@ const Card: CardInterface = (props: Property) => {
         breakInside: 'avoid',
         backgroundColor: '#fff',
         pageBreakInside: 'avoid',
+        boxShadow: '2px 2px #cbcbcb',
       }}
     >
       {props.children}
