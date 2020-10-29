@@ -2,6 +2,7 @@ import {
   LOADING_PRODUCTS,
   LOADING_PRODUCTS_SUCCESS,
   LOADING_PRODUCTS_FAILED,
+  ADD_TO_CART,
   productsDispatchType,
 } from './ProductActionTypes';
 import { Dispatch } from 'redux';
@@ -27,4 +28,13 @@ export const getProducts = (limit: number) => async (
       type: LOADING_PRODUCTS_FAILED,
     });
   }
+};
+
+export const addToCart = (id: number) => (
+  dispatch: Dispatch<productsDispatchType>
+) => {
+  dispatch({
+    type: ADD_TO_CART,
+    payload: id,
+  });
 };
