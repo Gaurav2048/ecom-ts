@@ -32,12 +32,9 @@ const Home = (props: RouteComponentProps) => {
             <Card.Title>{product.title}</Card.Title>
             <Card.Image>{product.image}</Card.Image>
             <Card.Description>{product.description}</Card.Description>
+            <Card.Price id={product.id}>{product.price}</Card.Price>
           </Card>
         ))}
-      {productsState.products &&
-        productsState.products.map((product: product) => {
-          console.log(product.image);
-        })}
     </Container>
   );
 };
