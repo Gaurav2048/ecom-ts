@@ -29,7 +29,7 @@ const Home = (props: RouteComponentProps) => {
     <Container>
       {productsState.products &&
         productsState.products.map((product: product) => (
-          <Card key={product.id}>
+          <Card key={product.id} id={product.id}>
             <Card.Title>{product.title}</Card.Title>
             <Card.Image>{product.image}</Card.Image>
             <Card.Description>{product.description}</Card.Description>

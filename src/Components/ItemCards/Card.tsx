@@ -1,11 +1,13 @@
 import React from 'react';
 import Title, { TitleProps } from './Title';
 import Description, { DescProps } from './Description';
+import { navigate } from '@reach/router';
 import Image, { ImageProps } from './Image';
 import Price, { PriceProp } from './Price';
 
 interface Property {
   children: React.ReactNode;
+  id: number;
 }
 
 interface CardInterface {
@@ -16,6 +18,12 @@ interface CardInterface {
 }
 
 const Card: CardInterface = (props: Property) => {
+  const { id } = props;
+
+  const handleCardClick = () => {
+    // navigate(`/products/${id}`);
+  };
+
   return (
     <div
       style={{
@@ -28,7 +36,9 @@ const Card: CardInterface = (props: Property) => {
         backgroundColor: '#fff',
         pageBreakInside: 'avoid',
         boxShadow: '2px 2px #cbcbcb',
+        cursor: 'pointer',
       }}
+      onClick={handleCardClick}
     >
       {props.children}
     </div>

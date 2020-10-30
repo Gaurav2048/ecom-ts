@@ -24,6 +24,7 @@ const AddDiv = styled(Div)`
   margin-left: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  z-index: 4;
 `;
 
 const Price: React.FC<PriceProp> = (props) => {

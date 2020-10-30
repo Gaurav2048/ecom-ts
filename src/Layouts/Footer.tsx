@@ -46,7 +46,12 @@ const FormDiv = styled(Div)`
   padding: 30px;
 `;
 
-const libraries = [
+interface Library {
+  title: string;
+  color: string;
+}
+
+const libraries: Library[] = [
   {
     title: 'Redux',
     color: '#f00',
@@ -71,6 +76,10 @@ const libraries = [
     title: 'Formik',
     color: '#00f',
   },
+  {
+    title: 'Styled-components',
+    color: '#f00',
+  },
 ];
 
 const Footer: React.FC = () => {
@@ -79,7 +88,7 @@ const Footer: React.FC = () => {
       Created with TypeScript and React
       <Section>
         <Div>
-          {libraries.map((library, index) => (
+          {libraries.map((library: Library, index: number) => (
             <Capsules key={index}>{library.title}</Capsules>
           ))}
         </Div>
