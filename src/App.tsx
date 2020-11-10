@@ -7,14 +7,12 @@ import Checkout from './Pages/Checkout';
 import Default from './Pages/Default';
 
 const App = (props) => {
-  return (
-    <Router>
+  return <Router>
       <Home path="/products" />
       <Product path="/products/:productId" />
       <Checkout path="/cart" />
       <Default default />
     </Router>
-  );
 }
 
 export default App;
