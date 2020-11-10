@@ -6,7 +6,7 @@ import Product from './Pages/Product';
 import Checkout from './Pages/Checkout';
 import Default from './Pages/Default';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Home path="/products" />
